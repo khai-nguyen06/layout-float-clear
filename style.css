@@ -1,0 +1,52 @@
+/* ==========================================================================
+   1. RESET BỘ LỰC BỐ CỤC (UNIVERSAL RESET)
+   ========================================================================== */
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+/* ==========================================================================
+   2. CẤU HÌNH BỐ CỤC 2 CỘT (FLOAT & CLEAR)
+   ========================================================================== */
+.container {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Cột bên trái (Nội dung chính) */
+.left-column {
+    width: 60%;
+    float: left;
+    background-color: lightblue;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Cột bên phải (Sidebar) */
+.right-column {
+    width: 38%;
+    float: right;
+    background-color: lightgreen;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Kỹ thuật Clearfix chống vỡ khung container */
+.container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
